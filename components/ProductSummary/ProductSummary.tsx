@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { Item, Label } from 'semantic-ui-react'
 import data from "../../database/data"
@@ -18,7 +19,7 @@ const ProductSummary = ({ product }: ProductSummaryProps) => {
     <Item.Group as="section">
       <Item style={{ alignItems: 'center' }}>
         <Item.Image size="medium">
-          <img src={image} alt={product.name} />
+          <Image layout='fill' src={image} alt={product.name} />
         </Item.Image>
         <Item.Content>
           <Item.Header as="h1">{product.name}</Item.Header>
